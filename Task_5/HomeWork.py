@@ -64,4 +64,4 @@ class FormattedPrinter(Printer):
         for str in values:
             print('*',str,'*')
 
-    
+    dfd
