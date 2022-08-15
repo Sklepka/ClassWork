@@ -67,3 +67,94 @@ spisok = Printer()
 spisok.log(1,2,3,4,5,6,67)
 spisok1 = FormattedPrinter()
 spisok1.log(1,2,3,4,5,6,67) """
+
+
+
+
+class Figure(object):
+
+    def __init__(self, *value):
+        length = len(value)
+        match length:
+            case 1:
+                self.f = Square(*value)
+            case 2:
+                self.f = Rectangle(*value)
+            case 3:
+                self.f = Triangle(*value)
+            case 4:
+                self.f = Polygon(*value)                                
+            case default:
+                return print('Вы ввели больше чисел')
+    
+    def perimeter(self):
+        return self.f.perimeter()
+    
+    def area(self):
+        return self.f.area()
+
+class Square():
+
+    def __init__(self, *value):
+        self.a = value[0]
+
+    def perimeter(self):
+        return self.a * 4
+
+    def area(self):
+        return self.a ** 2
+
+
+class Rectangle():
+
+    def __init__(self, *value):
+        self.a = value[0]
+        self.b = value[1]
+
+    def perimeter(self):
+        return (self.a +self.b) * 2
+
+    def area(self):
+        return self.a * self.b
+
+
+class Triangle():
+
+    def __init__(self, *value):
+        self.a = value[0]
+        self.b = value[1]
+        self.c = value[2]
+
+    def perimeter(self):
+        return self.a + self.b + self.c
+
+    def area(self):
+        p = ((self.a + self.b + self.c) / 2)
+        return (p * (p - self.a) * (p - self.b) * (p - self.c)) ** 0.5
+
+
+class Polygon():
+
+    def __init__(self, *value):
+        self.a = value[0]
+        self.b = value[1]
+        self.c = value[2]
+        self.d = value[3]
+
+    def perimeter(self):
+        return self.a + self.b + self.c + self.d
+    
+    def area(self):
+        p = ((self.a + self.b + self.c) / 2)
+        return (p * (p - self.a) * (p - self.b) * (p - self.c)) ** 0.5
+
+print(Figure(2,2,6).perimeter())
+
+
+
+
+
+
+
+                
+    
