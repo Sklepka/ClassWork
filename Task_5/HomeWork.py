@@ -53,7 +53,7 @@ Ivan.is_dangerous(Elepfant)
 Ivan.is_dangerous(Cobra)
  """
 
-class Printer(object):
+""" class Printer(object):
 
     def log(*values):
         print(*values)
@@ -63,5 +63,7 @@ class FormattedPrinter(Printer):
     def log(*values):
         for str in values:
             print('*',str,'*')
-
-    dfd
+spisok = Printer()
+spisok.log(1,2,3,4,5,6,67)
+spisok1 = FormattedPrinter()
+spisok1.log(1,2,3,4,5,6,67) """
